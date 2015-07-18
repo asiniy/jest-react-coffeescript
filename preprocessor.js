@@ -12,12 +12,12 @@ module.exports = {
     if (path.match(/\.coffee$/)) {
 
         // First we compile the coffeescript files to normal JSX
-        compiled_to_js = coffee.compile(src, {bare: true});
+        compiledToJs = coffee.compile(src, {bare: true});
 
         // Then we compile the JSX to React
-        compiled_to_react = ReactTools.transform(compiled_to_js)
+        compiledToReact = ReactTools.transform(compiledToJs);
 
-      return compiled_to_react;
+      return compiledToReact;
     }
     return src;
   }
